@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "Z2k4Rz",
+    "name": "Ironmmmman",
+    "price": 57,
+    "labels": [
+      {
+        "title": "Doll",
+        "color": "#6d28d9"
+      },
+      {
+        "title": "Battery Powered",
+        "color": "#71717a"
+      },
+      {
+        "title": "Baby",
+        "color": "#2563eb"
+      }
+    ],
+    "createdAt": 1689603546275,
+    "inStock": true
+  },
+  {
+    "_id": "Z2k4R12",
+    "name": "BogieMan",
+    "price": 57,
+    "labels": [
+      {
+        "title": "Doll",
+        "color": "#6d28d9"
+      },
+      {
+        "title": "Battery Powered",
+        "color": "#71717a"
+      },
+      {
+        "title": "Baby",
+        "color": "#2563eb"
+      }
+    ],
+    "createdAt": 1689603546275,
+    "inStock": true
+  },
+  {
+    "_id": "Z2k433",
+    "name": "Jonie Bravo",
+    "price": 57,
+    "labels": [
+      {
+        "title": "Doll",
+        "color": "#6d28d9"
+      },
+      {
+        "title": "Battery Powered",
+        "color": "#71717a"
+      },
+      {
+        "title": "Baby",
+        "color": "#2563eb"
+      }
+    ],
+    "createdAt": 1689603546275,
+    "inStock": true
+  }
+]
