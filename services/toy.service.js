@@ -25,9 +25,9 @@ function query(filterBy) {
     //     filteredToys = filteredToys.filter(toy => filterBy.labels.every(label => toy.labels.map(label => label.title).includes(label)))
     // }
     
-    //  if (filterBy.status) {
-    //     filteredToys = filteredToys.filter(toy => filterBy.status === 'stock' ? toy.inStock : !toy.inStock)
-    // }
+     if (filterBy.status) {
+        filteredToys = filteredToys.filter(toy => filterBy.status === 'stock' ? toy.inStock : !toy.inStock)
+    }
     
         // if(filterBy.pageIdx !== undefined) {
     //     const startPageIdx = filterBy.pageIdx * PAGE_SIZE

@@ -37,96 +37,26 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions))
 }
 
-// Express Routing:
 
+import { authRoutes } from './api/auth/auth.routes.js'
+import { userRoutes } from './api/user/user.routes.js'
+import { toyRoutes } from './api/toy/toy.routes.js'
 
-// Get Toy (READ)
-app.get('/api/toy/:toyId', (req, res) => {
-    const toyId = req.params.toyId
-    toyService.getById(toyId)
-        .then(toy => {
-            res.send(toy)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot get toy', err)
-            res.status(400).send('Cannot get toy')
-        })
+// routes
+app.use('/api/auth', authRoutes)
+app.use('/api/user', userRoutes)
+app.use('/api/toy', toyRoutes)
+
+// Make every unmatched server-side-route fall back to index.html
+// So when requesting http://localhost:3030/index.html/car/123 it will still respond with
+// our SPA (single page app) (the index.html file) and allow vue-router to take it from there
+
+app.get('/**', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
 })
-
-// Get Toys (READ)
-app.get('/api/toy', (req, res) => {
-    console.log("🚀 ~ file: server.js:53 ~ app.get ~ req:", req.query)
-    const filterBy = {
-        name: req.query.name || '',
-        price: req.query.price || 100,
-        inStock: req.query.status || '',
-        labels: req.query.labels || null,
-    }
-    toyService.query(filterBy)
-        .then(toys => {
-            res.send(toys)
-        })
-        .catch(err => {
-            loggerService.error('Cannot get toys', err)
-            res.status(400).send('Cannot get toys')
-        })
-})
-
-// Save Toy (/UPDATE)
-app.put('/api/toy/:toyId', (req, res) => {
-    const { _id, name, price, inStock, labels } = req.body
-    const toyToSave = { _id, name, price, inStock, labels }
-    
-    toyService.save(toyToSave)
-        .then(savedToy => {
-            loggerService.info('Toy saved!', toyToSave)
-            res.send(savedToy)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot save toy', err)
-            res.status(400).send('Cannot save toy')
-        })
-    })
-    
-// Save Toy (CREATE)
-app.post('/api/toy/', (req, res) => {
-    const toy = {
-        _id: req.params.id,
-        name: req.body.name,
-        price: +req.body.price,
-        labels: req.body.labels,
-        inStock: req.body.inStock,
-        createdAt: req.body.createdAt
-    }
-
-    toyService.save(toy)
-        .then(savedToy => {
-            loggerService.info('Toy saved!', toy)
-            res.send(savedToy)
-        })
-        .catch((err) => {
-            loggerService.error('Cannot save toy', err)
-            res.status(400).send('Cannot save toy')
-        })
-})
-
-// Delete toy (DELETE)
-app.delete('/api/toy/:toyId', (req, res) => {
-    const toyId = req.params.toyId
-    toyService.remove(toyId)
-        .then(toy => {
-            loggerService.info(`Toy ${toyId} removed`)
-            res.send(`Toy ${toyId} Removed`)
-            // res.redirect('/api/toy')
-        })
-        .catch((err) => {
-            loggerService.error('Cannot remove toy', err)
-            res.status(400).send('Cannot remove toy')
-        })
-})
-
 
 const port = process.env.PORT || 3030
+
 app.listen(port, () =>
     loggerService.info(`Server listening on port http://127.0.0.1:${port}/`)
 )
