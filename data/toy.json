@@ -1,45 +1,72 @@
 [
   {
-    "_id": "Z2k4Rz",
-    "name": "Ironmmmman",
-    "price": 57,
+    "name": "Yoyoman",
+    "price": 50,
+    "_id": "0SioK",
     "labels": [
-      {
-        "title": "Doll",
-        "color": "#6d28d9"
-      },
-      {
-        "title": "Battery Powered",
-        "color": "#71717a"
-      },
-      {
-        "title": "Baby",
-        "color": "#2563eb"
-      }
-    ],
-    "createdAt": 1689603546275,
-    "inStock": true
+        {
+          "title": "Boll",
+          "color": "#6d28d9"
+        },
+        {
+          "title": "Water Powered",
+          "color": "#71717a"
+        },
+        {
+          "title": "craby",
+          "color": "#2563eb"
+        }
+      ],
+      "createdAt": 1689603546275,
+      "inStock": true
+  },
+
+  {
+    "_id": "cdVW2",
+    "name": "chugbugu",
+    "price": 60,
+    "labels": [
+        {
+          "title": "Moll",
+          "color": "#71717a"
+        },
+        {
+          "title": "Air Powered",
+          "color": "#71717a"
+        },
+        {
+          "title": "Cat",
+          "color": "#2563eb"
+        }
+      ],
+      "createdAt": 1689603546275,
+      "inStock": true
+  },
+  {
+    "_id": "8XLJE",
+    "name": "Baba Laba",
+    "price": 90
   },
   {
     "_id": "Z2k4R12",
     "name": "BogieMan",
     "price": 57,
     "labels": [
-      {
-        "title": "Doll",
-        "color": "#6d28d9"
-      },
-      {
-        "title": "Battery Powered",
-        "color": "#71717a"
-      },
-      {
-        "title": "Baby",
-        "color": "#2563eb"
-      }
-    ],
-    "createdAt": 1689603546275,
-    "inStock": true
+        {
+          "title": "Doll",
+          "color": "#2563eb"
+        },
+        {
+          "title": "Battery Powered",
+          "color": "#71717a"
+        },
+        {
+          "title": "Baby",
+          "color": "#2563eb"
+        }
+      ],
+      "createdAt": 1689603546275,
+    "inStock": false
   },
   {
     "_id": "Z2k433",

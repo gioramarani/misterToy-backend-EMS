@@ -135,3 +135,24 @@
 18.7.2023, 18:40:03 - INFO - Server listening on port http://127.0.0.1:3030/
 18.7.2023, 18:40:22 - INFO - Server listening on port http://127.0.0.1:3030/
 18.7.2023, 19:06:25 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 14:49:30 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 16:15:30 - INFO - Toy saved! | {"_id":"Z2k4Rz","name":"Ironma","price":57}
+19.7.2023, 16:19:28 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 16:22:04 - INFO - Toy saved! | {"_id":"Z2k4R12","name":"BogieManssss","price":57}
+19.7.2023, 16:40:17 - INFO - Toy saved! | {"name":"Baba maba","price":0,"_id":"8XLJE"}
+19.7.2023, 16:46:03 - INFO - Toy saved! | {"name":"chugbugu","price":60,"_id":"cdVW2"}
+19.7.2023, 16:46:22 - INFO - Toy saved! | {"_id":"8XLJE","name":"Baba maba","price":90}
+19.7.2023, 16:51:47 - INFO - Toy saved! | {"_id":"8XLJE","name":"Baba maba","price":90}
+19.7.2023, 16:52:01 - INFO - Toy saved! | {"name":"Yoyoman","price":50,"_id":"0SioK"}
+19.7.2023, 16:52:17 - INFO - Toy saved! | {"_id":"cdVW2","name":"chugbugu","price":60}
+19.7.2023, 16:54:20 - INFO - Toy Z2k4Rz removed
+19.7.2023, 16:54:27 - INFO - Toy saved! | {"_id":"Z2k4R12","name":"BogieManssss","price":57}
+19.7.2023, 16:55:55 - INFO - Toy saved! | {"name":"fffddf","price":111,"_id":"BOzwd"}
+19.7.2023, 17:53:53 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 18:05:09 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 18:54:51 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 18:55:48 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 18:56:14 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 18:59:28 - INFO - Server listening on port http://127.0.0.1:3030/
+19.7.2023, 20:40:59 - INFO - Server listening on port http://127.0.0.1:3030/
+20.7.2023, 8:34:55 - INFO - Server listening on port http://127.0.0.1:3030/

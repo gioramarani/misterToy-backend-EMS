@@ -19,7 +19,12 @@ function query(filterBy) {
 
     filteredToys = filteredToys.filter(toy => toy.price <= +filterBy.price)
     
-    // if(filterBy.pageIdx !== undefined) {
+    if(!filterBy.inStock === 'all'){
+        filteredToys = filteredToys.filter(toy => {
+            JSON.stringify(toy.inStock) === filterBy.inStock
+        })
+    }
+        // if(filterBy.pageIdx !== undefined) {
     //     const startPageIdx = filterBy.pageIdx * PAGE_SIZE
     //     filteredToys = filteredToys.slice(startPageIdx, startPageIdx + PAGE_SIZE)
     // }

@@ -59,6 +59,7 @@ app.get('/api/toy', (req, res) => {
     const filterBy = {
         name: req.query.name || '',
         price: req.query.price || 100,
+        inStock: req.query.inStock || 'all'
         // pageIdx: req.query.pageIdx,
     }
     toyService.query(filterBy)
@@ -73,8 +74,8 @@ app.get('/api/toy', (req, res) => {
 
 // Save Toy (/UPDATE)
 app.put('/api/toy/:toyId', (req, res) => {
-    const { _id, name, price } = req.body
-    const toyToSave = { _id, name, price }
+    const { _id, name, price, inStock } = req.body
+    const toyToSave = { _id, name, price, inStock }
     
     toyService.save(toyToSave)
         .then(savedToy => {
