@@ -59,8 +59,8 @@ app.get('/api/toy', (req, res) => {
     const filterBy = {
         name: req.query.name || '',
         price: req.query.price || 100,
-        inStock: req.query.inStock || 'all'
-        // pageIdx: req.query.pageIdx,
+        inStock: req.query.status || '',
+        labels: req.query.labels || null,
     }
     toyService.query(filterBy)
         .then(toys => {
@@ -74,8 +74,8 @@ app.get('/api/toy', (req, res) => {
 
 // Save Toy (/UPDATE)
 app.put('/api/toy/:toyId', (req, res) => {
-    const { _id, name, price, inStock } = req.body
-    const toyToSave = { _id, name, price, inStock }
+    const { _id, name, price, inStock, labels } = req.body
+    const toyToSave = { _id, name, price, inStock, labels }
     
     toyService.save(toyToSave)
         .then(savedToy => {
@@ -90,12 +90,18 @@ app.put('/api/toy/:toyId', (req, res) => {
     
 // Save Toy (CREATE)
 app.post('/api/toy/', (req, res) => {
-    const { name, price } = req.body
-    const toyToSave = { name, price }
+    const toy = {
+        _id: req.params.id,
+        name: req.body.name,
+        price: +req.body.price,
+        labels: req.body.labels,
+        inStock: req.body.inStock,
+        createdAt: req.body.createdAt
+    }
 
-    toyService.save(toyToSave)
+    toyService.save(toy)
         .then(savedToy => {
-            loggerService.info('Toy saved!', toyToSave)
+            loggerService.info('Toy saved!', toy)
             res.send(savedToy)
         })
         .catch((err) => {
